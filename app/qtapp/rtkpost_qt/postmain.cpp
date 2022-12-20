@@ -81,7 +81,7 @@ MainForm *mainForm;
 extern "C" {
 
 // show message in message area ---------------------------------------------
-extern int showmsg(char *format, ...)
+extern int showmsg(const char *format, ...)
 {
     va_list arg;
     char buff[1024];
@@ -995,7 +995,6 @@ int MainForm::GetOption(prcopt_t &prcopt, solopt_t &solopt,
         }
     }
     // extended receiver error model option
-    prcopt.exterr=ExtErr;
     
     strcpy(prcopt.rnxopt[0],qPrintable(RnxOpts1));
     strcpy(prcopt.rnxopt[1],qPrintable(RnxOpts2));

@@ -935,6 +935,13 @@ typedef struct {        /* RINEX control struct type */
     int    ephset;      /* input ephemeris set (0-1) */
     char   opt[256];    /* rinex dependent options */
 } rnxctr_t;
+typedef struct {        /* extended receiver error model */
+    int ena[4];         /* model enabled */
+    double cerr[4][NFREQ*2]; /* code errors (m) */
+    double perr[4][NFREQ*2]; /* carrier-phase errors (m) */
+    double gpsglob[NFREQ]; /* gps-glonass h/w bias (m) */
+    double gloicb [NFREQ]; /* glonass interchannel bias (m/fn) */
+} exterr_t;
 
 typedef struct {        /* download URL type */
     char type[32];      /* data type */

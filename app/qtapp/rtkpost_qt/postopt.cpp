@@ -526,7 +526,6 @@ void OptDialog::GetOpt(void)
     RovList		 ->setPlainText(mainForm->RovList);
     BaseList	 ->setPlainText(mainForm->BaseList);
 	
-    ExtErr						=mainForm->ExtErr;
 	
 	UpdateEnable();
 }
@@ -645,7 +644,6 @@ void OptDialog::SetOpt(void)
     mainForm->RovList	  =RovList		->toPlainText();
     mainForm->BaseList	  =BaseList		->toPlainText();
 	
-    mainForm->ExtErr	  =ExtErr;
 	
 	UpdateEnable();
 }

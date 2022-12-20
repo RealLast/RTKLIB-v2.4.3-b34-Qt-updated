@@ -85,7 +85,6 @@ private:
     void UpdateEnable(void);
     void UpdateEnableExtErr(void);
 public:
-	exterr_t ExtErr;
 	
     explicit OptDialog(QWidget *parent);
 };

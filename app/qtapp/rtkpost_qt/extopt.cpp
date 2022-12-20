@@ -64,20 +64,7 @@ void ExtOptDialog::GetExtErrOpt(void)
 		{PhaseErr10,PhaseErr11,PhaseErr12,PhaseErr13,PhaseErr14,PhaseErr15},
 		{PhaseErr20,PhaseErr21,PhaseErr22,PhaseErr23,PhaseErr24,PhaseErr25}
 	};
-	
-    ExtEna0->setChecked(optDialog->ExtErr.ena[0]);
-    ExtEna1->setChecked(optDialog->ExtErr.ena[1]);
-    ExtEna2->setChecked(optDialog->ExtErr.ena[2]);
-    ExtEna3->setChecked(optDialog->ExtErr.ena[3]);
-	
-	for (int i=0;i<3;i++) for (int j=0;j<6;j++) {
-        editc[i][j]->setText(QString::number(optDialog->ExtErr.cerr[i][j],'f',3));
-        editp[i][j]->setText(QString::number(optDialog->ExtErr.perr[i][j],'f',3));
-	}
-    GpsGloB0->setText(QString::number(optDialog->ExtErr.gpsglob[0],'f',3));
-    GpsGloB1->setText(QString::number(optDialog->ExtErr.gpsglob[1],'f',3));
-    GloICB0->setText(QString::number(optDialog->ExtErr.gloicb[0],'f',3));
-    GloICB1->setText(QString::number(optDialog->ExtErr.gloicb[1],'f',3));
+
 }
 //---------------------------------------------------------------------------
 void ExtOptDialog::SetExtErrOpt(void)
@@ -92,19 +79,7 @@ void ExtOptDialog::SetExtErrOpt(void)
 		{PhaseErr10,PhaseErr11,PhaseErr12,PhaseErr13,PhaseErr14,PhaseErr15},
 		{PhaseErr20,PhaseErr21,PhaseErr22,PhaseErr23,PhaseErr24,PhaseErr25}
 	};
-    optDialog->ExtErr.ena[0]=ExtEna0->isChecked();
-    optDialog->ExtErr.ena[1]=ExtEna1->isChecked();
-    optDialog->ExtErr.ena[2]=ExtEna2->isChecked();
-    optDialog->ExtErr.ena[3]=ExtEna3->isChecked();
-	
-	for (int i=0;i<3;i++) for (int j=0;j<6;j++) {
-        optDialog->ExtErr.cerr[i][j]=editc[i][j]->text().toDouble();
-        optDialog->ExtErr.perr[i][j]=editp[i][j]->text().toDouble();
-	}
-    optDialog->ExtErr.gloicb[0]=GloICB0->text().toDouble();
-    optDialog->ExtErr.gloicb[1]=GloICB1->text().toDouble();
-    optDialog->ExtErr.gpsglob[0]=GpsGloB0->text().toDouble();
-    optDialog->ExtErr.gpsglob[1]=GpsGloB1->text().toDouble();
+
 }
 //---------------------------------------------------------------------------
 void ExtOptDialog::UpdateEnable(void)
