@@ -3,7 +3,7 @@ For this, the error "exterr_t not defined" as well as the faulty build config we
 Furthermore, instead of building libRTKlib.a, the necessary code from /src is directly build into the rtkpost application,
 since I was only interested in that part. 
 In order to build, just open app/qtapp/rtkpost_qt/rtk_post.proj file with Qt.
-
+**The changes only affect branch rtklib_v2.4.3, so do not forget to check it out!**
 
 --------------------------------------------------------------------------------
 
