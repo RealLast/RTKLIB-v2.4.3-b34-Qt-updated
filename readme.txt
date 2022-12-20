@@ -1,4 +1,8 @@
-Fork of RTKLib
+Fork of RTKLib. Allows to build app/rtkpost_qt again using Qt.
+For this, the error "exterr_t not defined" as well as the faulty build config were fixed.
+Furthermore, instead of building libRTKlib.a, the necessary code from /src is directly build into the rtkpost application,
+since I was only interested in that part. 
+In order to build, just open app/qtapp/rtkpost_qt/rtk_post.proj file with Qt.
 
 
 --------------------------------------------------------------------------------
